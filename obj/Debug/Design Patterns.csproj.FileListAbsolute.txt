@@ -12,3 +12,10 @@ C:\Users\Administrador\Desktop\Geral\Tecnologia\Cursos Alura\Back End\Design Pat
 C:\Users\Administrador\Desktop\Geral\Tecnologia\Cursos Alura\Back End\Design Patterns\Design Patterns\bin\Debug\Design Patterns.exe.config
 C:\Users\Administrador\Desktop\Geral\Tecnologia\Cursos Alura\Back End\Design Patterns\Design Patterns\bin\Debug\Design Patterns.exe
 C:\Users\Administrador\Desktop\Geral\Tecnologia\Cursos Alura\Back End\Design Patterns\Design Patterns\bin\Debug\Design Patterns.pdb
+C:\Users\Administrador\Desktop\Geral\Tecnologia\Cursos Alura\Back End\Design Patterns\bin\Debug\Design Patterns.exe.config
+C:\Users\Administrador\Desktop\Geral\Tecnologia\Cursos Alura\Back End\Design Patterns\bin\Debug\Design Patterns.exe
+C:\Users\Administrador\Desktop\Geral\Tecnologia\Cursos Alura\Back End\Design Patterns\bin\Debug\Design Patterns.pdb
+C:\Users\Administrador\Desktop\Geral\Tecnologia\Cursos Alura\Back End\Design Patterns\obj\Debug\Design Patterns.csprojAssemblyReference.cache
+C:\Users\Administrador\Desktop\Geral\Tecnologia\Cursos Alura\Back End\Design Patterns\obj\Debug\Design Patterns.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\Geral\Tecnologia\Cursos Alura\Back End\Design Patterns\obj\Debug\Design Patterns.exe
+C:\Users\Administrador\Desktop\Geral\Tecnologia\Cursos Alura\Back End\Design Patterns\obj\Debug\Design Patterns.pdb

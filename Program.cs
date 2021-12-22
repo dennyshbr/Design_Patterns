@@ -1,5 +1,7 @@
-﻿using Design_Patterns.ChainOfResponsibility;
+﻿using Design_Patterns.Builder;
+using Design_Patterns.ChainOfResponsibility;
 using Design_Patterns.Decorator;
+using Design_Patterns.Observer;
 using Design_Patterns.Strategy;
 using Design_Patterns.TemplateMethod;
 using System;
@@ -11,7 +13,7 @@ namespace Design_Patterns
     {
         static void Main(string[] args)
         {
-            State();
+            Observer();
 
             Console.ReadKey();
         }
@@ -95,6 +97,35 @@ namespace Design_Patterns
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        static NotaFiscal Builder(IList<AcaoAposGerarNotaFiscal> acoesAposGerarNota)
+        {
+            NotaFiscalBuilder nfBuilder = new NotaFiscalBuilder(acoesAposGerarNota);
+
+            nfBuilder
+                .ParaEmpresa("Empresa XX")
+                .ComCnpj("00000000000000")
+                .Com(new ItemDaNota("computador", 2000))
+                .NaDataAtual();
+
+            NotaFiscal notaFiscal = nfBuilder.Constroi();
+
+            Console.WriteLine($"Valor bruto da nota: {notaFiscal.ValorBruto}");
+
+            return notaFiscal;
+        }
+
+        static void Observer()
+        {
+            IList<AcaoAposGerarNotaFiscal> acoesAposGerarNota = new List<AcaoAposGerarNotaFiscal>();
+
+            acoesAposGerarNota.Add(new EnviadorDeEmail());
+            acoesAposGerarNota.Add(new EnviadorDeSms());
+            acoesAposGerarNota.Add(new ImpressaoNotaFiscal());
+            acoesAposGerarNota.Add(new NotaFiscalDao());
+
+            NotaFiscal notaFiscal = Builder(acoesAposGerarNota);
         }
     }
 }
