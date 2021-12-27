@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Design_Patterns.Factory
 {
@@ -14,7 +9,7 @@ namespace Design_Patterns.Factory
         {
             IDbConnection connection = new SqlConnection();
             
-            connection.ConnectionString = "User Id=dennysr;Password=123456;Server=localhost;Database=meuBanco";
+            connection.ConnectionString = "User Id=name;Password=123456;Server=localhost;Database=DataBaseName";
 
             connection.Open();
 

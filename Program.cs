@@ -1,11 +1,13 @@
 ﻿using Design_Patterns.Builder;
 using Design_Patterns.ChainOfResponsibility;
 using Design_Patterns.Decorator;
+using Design_Patterns.Factory;
 using Design_Patterns.Observer;
 using Design_Patterns.Strategy;
 using Design_Patterns.TemplateMethod;
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Design_Patterns
 {
@@ -13,8 +15,6 @@ namespace Design_Patterns
     {
         static void Main(string[] args)
         {
-            Observer();
-
             Console.ReadKey();
         }
 
@@ -126,6 +126,29 @@ namespace Design_Patterns
             acoesAposGerarNota.Add(new NotaFiscalDao());
 
             NotaFiscal notaFiscal = Builder(acoesAposGerarNota);
+        }
+
+        static void Factory()
+        {
+            IDbConnection connection = null;
+            try
+            {
+                connection = new ConnectionFactory().GetConnection();
+
+                IDbCommand command = connection.CreateCommand();
+                command.CommandText = "select * from table";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);   
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
         }
     }
 }
