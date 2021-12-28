@@ -2,6 +2,7 @@
 using Design_Patterns.ChainOfResponsibility;
 using Design_Patterns.Decorator;
 using Design_Patterns.Factory;
+using Design_Patterns.Flyweight;
 using Design_Patterns.Observer;
 using Design_Patterns.Strategy;
 using Design_Patterns.TemplateMethod;
@@ -15,6 +16,8 @@ namespace Design_Patterns
     {
         static void Main(string[] args)
         {
+            Flyweight();
+
             Console.ReadKey();
         }
 
@@ -149,6 +152,26 @@ namespace Design_Patterns
                     connection.Close();
                 }
             }
+        }
+
+        static void Flyweight()
+        {
+            NotasMusicais notas = new NotasMusicais();
+
+            List<INotaMusical> listaNotas = new List<INotaMusical>();
+
+            listaNotas.Add(notas.Get("do"));
+            listaNotas.Add(notas.Get("do"));
+            listaNotas.Add(notas.Get("re"));
+            listaNotas.Add(notas.Get("mi"));
+            listaNotas.Add(notas.Get("fa"));
+            listaNotas.Add(notas.Get("fa"));
+
+            Piano piano = new Piano();
+
+            piano.Tocar(listaNotas);
+
+            Console.WriteLine("Notas tocadas");
         }
     }
 }

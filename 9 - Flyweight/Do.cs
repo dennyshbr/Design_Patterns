@@ -1,4 +1,4 @@
-﻿namespace Design_Patterns._9___Flyweight
+﻿namespace Design_Patterns.Flyweight
 {
     public class Do : INotaMusical
     {
