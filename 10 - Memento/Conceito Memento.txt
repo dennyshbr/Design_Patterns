@@ -1,0 +1,5 @@
+﻿Salva estados anteriores de um objeto, podendo recuperar tais estados.
+
+Aqui no exemplo foi criada uma classe Estado que guarda o contrato, mas como não tem mais
+campos adicionais como por exemplo a data que foi salvo determinado estado do contrato,
+na classe Histórico poderia ter sido criado uma lista de Contratos direto por exemplo.

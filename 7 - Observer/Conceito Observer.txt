@@ -1,0 +1,9 @@
+﻿Este padrão de projeto é utilizado quando temos a necessidade de executar várias ações
+após um determinado evento do sistema.
+
+Com isso podemos fazer várias classes que representam essas várias ações, como neste exemplo
+ações que devem ocorrer após a criação de uma nota fiscal, que precisa enviar e-mail, sms,
+persistir algo no banco, etc.
+
+Desta forma essa classe que recebe essa lista de ações nos permite remover ou adicionar
+uma nova ação com facilidade sem quebrar o código existente.

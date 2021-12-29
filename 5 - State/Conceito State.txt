@@ -1,0 +1,6 @@
+﻿Necessário quando temos a necessidade de controlar o estado de um objeto.
+
+Fazer tal controle dentro da mesma classe torna o entendimento e manutenção da mesma
+um pouco complexo. Uma possibilidade é criarmos classes separadas para representar
+cada estado com as regras de negócio que verificam se um estado de um objeto pode navegar
+para um outro estado por exemplo.

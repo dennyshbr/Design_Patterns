@@ -1,0 +1,2 @@
+﻿Flyweight: reutilização do mesmo objeto (instância) no programa, sem precisar criar uma nova instância
+Diferença para o singleton, é que o Flyweight consegue garantir uma única existência de vários objetos ao mesmo tempo.

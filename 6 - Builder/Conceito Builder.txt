@@ -1,0 +1,5 @@
+﻿Este padrão de projeto é utilizado quando temos classes que são complexas de serem criadas,
+na qual possuem muitos parâmetros no construtor por exemplo.
+
+Desta forma pode-se utilizar o padrão Builder para facilitar a criação de um objeto,
+podendo diminuir a quantidade de parâmetros passados e criar um objeto de forma mais simplificada.

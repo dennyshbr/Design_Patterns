@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="10 - Memento\Contrato.cs" />
+    <Compile Include="10 - Memento\EstadoContrato.cs" />
+    <Compile Include="10 - Memento\HistoricoContrato.cs" />
+    <Compile Include="10 - Memento\TipoCotrato.cs" />
     <Compile Include="2 - Chain of Responsibility\CalculadorDeDescontos.cs" />
     <Compile Include="1 - Strategy\CalculadorDeImpostos.cs" />
     <Compile Include="2 - Chain of Responsibility\Desconto.cs" />

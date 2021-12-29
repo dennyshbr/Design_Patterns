@@ -3,6 +3,7 @@ using Design_Patterns.ChainOfResponsibility;
 using Design_Patterns.Decorator;
 using Design_Patterns.Factory;
 using Design_Patterns.Flyweight;
+using Design_Patterns.Memento;
 using Design_Patterns.Observer;
 using Design_Patterns.Strategy;
 using Design_Patterns.TemplateMethod;
@@ -16,7 +17,7 @@ namespace Design_Patterns
     {
         static void Main(string[] args)
         {
-            Flyweight();
+            Memento();
 
             Console.ReadKey();
         }
@@ -172,6 +173,30 @@ namespace Design_Patterns
             piano.Tocar(listaNotas);
 
             Console.WriteLine("Notas tocadas");
+        }
+
+        static void Memento()
+        {
+            HistoricoContrato historico = new HistoricoContrato();
+
+            Contrato contrato = new Contrato(DateTime.Now, "Marcos", TipoCotrato.Novo);
+
+            historico.Adiciona(contrato.SalvarEstado());
+
+            Console.WriteLine(contrato.Tipo);
+
+            contrato.Avanca();
+            historico.Adiciona(contrato.SalvarEstado());
+
+            Console.WriteLine(contrato.Tipo);
+
+            contrato.Avanca();
+            historico.Adiciona(contrato.SalvarEstado());
+
+            Console.WriteLine(contrato.Tipo);
+
+
+            Console.WriteLine(historico.ObterEstado(0).Contrato.Tipo);
         }
     }
 }

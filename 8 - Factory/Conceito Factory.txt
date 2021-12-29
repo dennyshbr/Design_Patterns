@@ -1,0 +1,4 @@
+﻿Utilizado quando precisamos ter uma classe que devolva a implementação de uma abstração
+e a classe que chama a factory não precisa saber qual classe concreta será disponibilizada.
+
+Pode-se ter um parâmetro que indica para a factory o tipo de classe que ela pode retornar.

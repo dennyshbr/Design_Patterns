@@ -1,0 +1,4 @@
+﻿Classes que implementam a mesma interface, cada uma contendo a sua regra de negócio.
+
+Uma outra classe pode receber essa interface, mas não precisa saber qual regra irá
+implementá-la, podendo ser trocado o tipo de estratégia no programa.

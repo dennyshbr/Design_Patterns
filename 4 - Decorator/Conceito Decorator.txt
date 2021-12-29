@@ -1,0 +1,8 @@
+﻿Necessário quando queremos adicionar um novo comportamento a uma classe, mas sem precisar
+mecher nesta classe em específico.
+
+Desta forma pode-se criar uma nova classe que receba a classe anterior pelo construtor.
+Sendo possível adicionar um novo comportamento, sem mecher no que já existia.
+
+Seguindo até a sigla "O" -> "Open/Closed Principle" do SOLID: Aberto para extensões e fechado
+para alterações.

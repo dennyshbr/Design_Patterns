@@ -1,0 +1,5 @@
+﻿Utilizado quando se tem a necessidade de um mesmo comportamento para classes diferentes.
+
+Para esta situação, geralmente é criado uma classe abstrata com este comportamento em comum e 
+disponibilizando método(s) abstratos para as classes concretas implementarem seus
+comportamentos específicos.

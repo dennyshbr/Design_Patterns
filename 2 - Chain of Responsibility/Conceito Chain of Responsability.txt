@@ -1,0 +1,8 @@
+﻿Utilizado quando temos a necessidade de muitos if/else if/else
+
+Para não poluir uma classe com essa grande quantidade de if/else if/else, pode-se
+colocar cada condição em uma classe separada, e fazer um aninhamento entre essas classes.
+Caso a condição da classe atual não seja atendidada, será feita a verificação da condição
+da próxima classe que foi recebida por construtor por exemplo. No momento em que a condição
+de uma determinada classe for atendida, o programa pode retornar o valor desta classe
+e encerrar a verificação de condições na cadeia de classes que foram aninhadas.
