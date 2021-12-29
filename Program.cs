@@ -3,6 +3,7 @@ using Design_Patterns.ChainOfResponsibility;
 using Design_Patterns.Decorator;
 using Design_Patterns.Factory;
 using Design_Patterns.Flyweight;
+using Design_Patterns.Interpreter;
 using Design_Patterns.Memento;
 using Design_Patterns.Observer;
 using Design_Patterns.Strategy;
@@ -17,7 +18,7 @@ namespace Design_Patterns
     {
         static void Main(string[] args)
         {
-            Memento();
+            Interpreter();
 
             Console.ReadKey();
         }
@@ -197,6 +198,17 @@ namespace Design_Patterns
 
 
             Console.WriteLine(historico.ObterEstado(0).Contrato.Tipo);
+        }
+
+        static void Interpreter()
+        {
+            IExpressao esquerda = new Soma(new Numero(1), new Numero(10));
+
+            IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
+
+            IExpressao soma = new Soma(esquerda, direita);
+
+            Console.WriteLine(soma.Avaliar());
         }
     }
 }

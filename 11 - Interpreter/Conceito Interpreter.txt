@@ -1,0 +1,5 @@
+﻿Utilizado para avaliar uma determinada expressão, podendo ser utilizado para avaliação
+de expressões matemáticas.
+
+ex:
+ (10 + 20) + (25 - 5)

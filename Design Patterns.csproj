@@ -47,6 +47,10 @@
     <Compile Include="10 - Memento\EstadoContrato.cs" />
     <Compile Include="10 - Memento\HistoricoContrato.cs" />
     <Compile Include="10 - Memento\TipoCotrato.cs" />
+    <Compile Include="11 - Interpreter\IExpressao.cs" />
+    <Compile Include="11 - Interpreter\Numero.cs" />
+    <Compile Include="11 - Interpreter\Soma.cs" />
+    <Compile Include="11 - Interpreter\Subtracao.cs" />
     <Compile Include="2 - Chain of Responsibility\CalculadorDeDescontos.cs" />
     <Compile Include="1 - Strategy\CalculadorDeImpostos.cs" />
     <Compile Include="2 - Chain of Responsibility\Desconto.cs" />
@@ -104,6 +108,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1 - Strategy\Conceito Strategy.txt" />
+    <Content Include="10 - Memento\Conceito Memento.txt" />
+    <Content Include="2 - Chain of Responsibility\Conceito Chain of Responsability.txt" />
+    <Content Include="3 - Template Method\Conceito Template Method.txt" />
+    <Content Include="4 - Decorator\Conceito Decorator.txt" />
+    <Content Include="5 - State\Conceito State.txt" />
+    <Content Include="6 - Builder\Conceito Builder.txt" />
+    <Content Include="7 - Observer\Conceito Observer.txt" />
+    <Content Include="8 - Factory\Conceito Factory.txt" />
+    <Content Include="9 - Flyweight\Conceito Flyweight.txt" />
+    <Content Include="Tipos de Design Patterns.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
