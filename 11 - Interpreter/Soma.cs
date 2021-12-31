@@ -1,22 +1,30 @@
-﻿namespace Design_Patterns.Interpreter
+﻿using Design_Patterns.Visitor;
+using System;
+
+namespace Design_Patterns.Interpreter
 {
     public class Soma : IExpressao
     {
-        private IExpressao _esquerda;
-        private IExpressao _direita;
+        public IExpressao Esquerda { get; private set; }
+        public IExpressao Direita { get; private set; }
 
         public Soma(IExpressao esquerda, IExpressao direita)
         {
-            _esquerda = esquerda;
-            _direita = direita;
+            Esquerda = esquerda;
+            Direita = direita;
         }
 
         public int Avaliar()
         {
-            int valorEsquerda = _esquerda.Avaliar();
-            int valorDireita = _direita.Avaliar();
+            int valorEsquerda = Esquerda.Avaliar();
+            int valorDireita = Direita.Avaliar();
 
             return valorEsquerda + valorDireita;
+        }
+
+        public void Imprimir(IImpressaoVisitor impressora)
+        {
+            impressora.ImprimeSoma(this);
         }
     }
 }

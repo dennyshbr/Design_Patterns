@@ -1,0 +1,4 @@
+﻿O padrão Visitor pode ser utilizado quando precisamos percorrer nós dentro de uma estrutura de 
+dados ou árvore de expressão como visto neste exemplo.
+
+Dentro de cada nó será "visitado" a sua lógica e executado tal lógica.

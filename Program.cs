@@ -8,6 +8,7 @@ using Design_Patterns.Memento;
 using Design_Patterns.Observer;
 using Design_Patterns.Strategy;
 using Design_Patterns.TemplateMethod;
+using Design_Patterns.Visitor;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,7 +19,7 @@ namespace Design_Patterns
     {
         static void Main(string[] args)
         {
-            Interpreter();
+            Visitor();
 
             Console.ReadKey();
         }
@@ -209,6 +210,27 @@ namespace Design_Patterns
             IExpressao soma = new Soma(esquerda, direita);
 
             Console.WriteLine(soma.Avaliar());
+        }
+       
+        static void Visitor()
+        {
+            ImpressoraVisitora impressora = new ImpressoraVisitora();
+
+            IExpressao esquerda = new Soma(new Numero(5), new Numero(5));
+
+            IExpressao direita = new Subtracao(new Numero(15), new Numero(5));
+
+            //((5 + 5) + (15 - 5))
+            Soma soma = new Soma(esquerda, direita);
+            Console.Write("Expressão da soma: ");
+            soma.Imprimir(impressora);
+
+            Console.WriteLine();
+
+            //((5+5)-(15-5))
+            Subtracao subtracao = new Subtracao(esquerda, direita);
+            Console.Write("Expressão da subtração: ");
+            subtracao.Imprimir(impressora);
         }
     }
 }
