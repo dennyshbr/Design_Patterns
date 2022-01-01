@@ -1,0 +1,11 @@
+﻿O bridge é utilizado quando precisamos fazer uma ponte entre duas hierarquias de classes,
+separando as responsabilidades em hierarquias diferentes e fazendo as mesmas se comunicarem
+através de abstração.
+
+Neste exemplo se não houvesse a separação de hierarquias, teriam que ser criadas 4 classes: 
+	ex: MsgAdmPorSMS, MsgAdmPorEmail,
+		MsgClientePorSms, MsgClientePorEmail
+
+Esse tipo de cenário ocorre porque na mesma hierarquia está sendo feita mais de uma 
+responsabilidade. O bridge traz essa ideia de separar as hierarquias de classes, dividindo 
+as responsabilidades e permitindo a comunicação entre as hierarquias.

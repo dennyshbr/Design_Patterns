@@ -53,6 +53,12 @@
     <Compile Include="11 - Interpreter\Subtracao.cs" />
     <Compile Include="12 - Visitor\IImpressaoVisitor.cs" />
     <Compile Include="12 - Visitor\ImpressoraVisitora.cs" />
+    <Compile Include="13 - Bridge\EnvioPorEmail.cs" />
+    <Compile Include="13 - Bridge\EnvioPorSms.cs" />
+    <Compile Include="13 - Bridge\IEnviador.cs" />
+    <Compile Include="13 - Bridge\IMensagem.cs" />
+    <Compile Include="13 - Bridge\MensagemCliente.cs" />
+    <Compile Include="13 - Bridge\MensagemAdministrativa.cs" />
     <Compile Include="2 - Chain of Responsibility\CalculadorDeDescontos.cs" />
     <Compile Include="1 - Strategy\CalculadorDeImpostos.cs" />
     <Compile Include="2 - Chain of Responsibility\Desconto.cs" />
@@ -115,6 +121,8 @@
     <Content Include="1 - Strategy\Conceito Strategy.txt" />
     <Content Include="10 - Memento\Conceito Memento.txt" />
     <Content Include="11 - Interpreter\Conceito Interpreter.txt" />
+    <Content Include="12 - Visitor\Conceito Visitor.txt" />
+    <Content Include="13 - Bridge\Conceito Bridge.txt" />
     <Content Include="2 - Chain of Responsibility\Conceito Chain of Responsability.txt" />
     <Content Include="3 - Template Method\Conceito Template Method.txt" />
     <Content Include="4 - Decorator\Conceito Decorator.txt" />

@@ -1,4 +1,5 @@
-﻿using Design_Patterns.Builder;
+﻿using Design_Patterns.Bridge;
+using Design_Patterns.Builder;
 using Design_Patterns.ChainOfResponsibility;
 using Design_Patterns.Decorator;
 using Design_Patterns.Factory;
@@ -19,7 +20,7 @@ namespace Design_Patterns
     {
         static void Main(string[] args)
         {
-            Visitor();
+            Bridge();
 
             Console.ReadKey();
         }
@@ -231,6 +232,24 @@ namespace Design_Patterns
             Subtracao subtracao = new Subtracao(esquerda, direita);
             Console.Write("Expressão da subtração: ");
             subtracao.Imprimir(impressora);
+        }
+
+        static void Bridge()
+        {
+            string cliente = "Bianca";
+            string administrador = "Ana";
+
+            IEnviador enviadorSMS = new EnvioPorSms();
+
+            IEnviador enviadorEmail = new EnvioPorEmail();
+
+            IMensagem msgCliente = new MensagemCliente(cliente, enviadorSMS);
+
+            IMensagem msgAdm = new MensagemAdministrativa(administrador, enviadorEmail);
+
+            msgCliente.Enviar();
+
+            msgAdm.Enviar();
         }
     }
 }
